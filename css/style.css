@@ -1,7 +1,5 @@
 html {
     box-sizing: border-box;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 *, ::after, ::before {
@@ -14,7 +12,7 @@ body {
     font-family: 'Lato', sans-serif;
     background-image: url("../images/dolars.png");
     background-size: cover;
-    margin: 5px auto;
+    margin: auto;
 }
 
 .form {
