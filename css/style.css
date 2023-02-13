@@ -1,7 +1,7 @@
 html {
     box-sizing: border-box;
-    background: url("../images/dolars.png") no-repeat center center fixed; 
-
+    background: url("../images/dolars.png") no-repeat center fixed; 
+    background-size: cover;
 }
 
 *, ::after, ::before {
