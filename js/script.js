@@ -1,35 +1,32 @@
 {
-const formElement = document.querySelector(".js-form")
-const currencyInElement = document.querySelector(".js-currencyIN");
-const currencyOutElement = document.querySelector(".js-currencyOUT");
-const changeButton = document.querySelector(".js-changeButton");
+    const changeCurrency = () => {
+        const currencyInElement = document.querySelector(".js-currencyIN");
+        const currencyOutElement = document.querySelector(".js-currencyOUT");
+        const changeIN = `${currencyOutElement.value}`;
+        const changeOUT = `${currencyInElement.value}`;
+        currencyInElement.value = changeIN;
+        currencyOutElement.value = changeOUT;
+    };
 
+    const updateResultText = (amount, result, currencyInElement, currencyOutElement) => {
+        const resultElement = document.querySelector(".js-result");
+        resultElement.innerHTML = `Kwota po przeliczeniu: <br>${amount.toFixed(2)} ${currencyInElement.value} = <strong> ${result.toFixed(2)} ${currencyOutElement.value}</strong>`;
+    };
 
-const changeCurrency = () => {
-    const changeIN = `${currencyOutElement.value}`;
-    const changeOUT = `${currencyInElement.value}`;
-    currencyInElement.value = changeIN;
-    currencyOutElement.value = changeOUT;
-};
-
-const updateResultText = (amount, result, currencyInElement, currencyOutElement) => {
-    const resultElement = document.querySelector(".js-result");
-    resultElement.innerHTML = `Kwota po przeliczeniu: <br>${amount.toFixed(2)} ${currencyInElement.value} = <strong> ${result.toFixed(2)} ${currencyOutElement.value}</strong>`;
-};
-
-const onFormSubmit = (event) => {
+    const onFormSubmit = (event) => {
         event.preventDefault();
-
+        const currencyInElement = document.querySelector(".js-currencyIN");
+        const currencyOutElement = document.querySelector(".js-currencyOUT");
         const amountElement = document.querySelector(".js-amount");
         const currencyChange = `${currencyInElement.value}/${currencyOutElement.value}`;
         const amount = +amountElement.value;
-        const result = calculateResult(amount, currencyChange);
+        const exchangeRate = calculateResult(currencyChange);
+        const result = amount * exchangeRate;
 
         updateResultText(amount, result, currencyInElement, currencyOutElement);
-};
+    };
 
-
-    const calculateResult = (amount, currencyChange) => {
+    const calculateResult = (currencyChange) => {
         /* Kursy na dzień 2023-01-23 z NBP */
         const PLN = 1;
         const EUR = 4.7186;
@@ -39,76 +36,57 @@ const onFormSubmit = (event) => {
 
         switch (currencyChange) {
             case "PLN/EUR":
-                exchangeRate = PLN / EUR;
-                return amount * +exchangeRate;
+                return PLN / EUR;
             case "PLN/USD":
-                exchangeRate = PLN / USD;
-                return amount * +exchangeRate;
+                return PLN / USD;
             case "PLN/GBP":
-                exchangeRate = PLN / GBP;
-                return amount * +exchangeRate;
+                return PLN / GBP;
             case "PLN/CHF":
-                exchangeRate = PLN / CHF;
-                return amount * +exchangeRate;
+                return PLN / CHF;
             case "EUR/PLN":
-                exchangeRate = EUR / PLN;
-                return amount * +exchangeRate;
+                return EUR / PLN;
             case "EUR/USD":
-                exchangeRate = EUR / USD;
-                return amount * +exchangeRate;
+                return EUR / USD;
             case "EUR/GBP":
-                exchangeRate = EUR / GBP;
-                return amount * +exchangeRate;
+                return EUR / GBP;
             case "EUR/CHF":
-                exchangeRate = EUR / CHF;
-                return amount * +exchangeRate;
+                return EUR / CHF;
             case "USD/PLN":
-                exchangeRate = USD / PLN;
-                return amount * +exchangeRate;
+                return USD / PLN;
             case "USD/EUR":
-                exchangeRate = USD / EUR;
-                return amount * +exchangeRate;
+                return USD / EUR;
             case "USD/GBP":
-                exchangeRate = USD / GBP;
-                return amount * +exchangeRate;
+                return USD / GBP;
             case "USD/CHF":
-                exchangeRate = USD / CHF;
-                return amount * +exchangeRate;
+                return USD / CHF;
             case "GBP/PLN":
-                exchangeRate = GBP / PLN;
-                return amount * +exchangeRate;
+                return GBP / PLN;
             case "GBP/EUR":
-                exchangeRate = GBP / EUR;
-                return amount * +exchangeRate;
+                return GBP / EUR;
             case "GBP/USD":
-                exchangeRate = GBP / USD;
-                return amount * +exchangeRate;
+                return GBP / USD;
             case "GBP/CHF":
-                exchangeRate = GBP / CHF;
-                return amount * +exchangeRate;
+                return GBP / CHF;
             case "CHF/PLN":
-                exchangeRate = CHF / PLN;
-                return amount * +exchangeRate;
+                return CHF / PLN;
             case "CHF/EUR":
-                exchangeRate = CHF / EUR;
-                return amount * +exchangeRate;
+                return CHF / EUR;
             case "CHF/GBP":
-                exchangeRate = CHF / GBP;
-                return amount * exchangeRate;
+                return CHF / GBP;
             case "CHF/USD":
-                exchangeRate = CHF / USD;
-                return amount * +exchangeRate;
+                return CHF / USD;
             default:
-                exchangeRate = 1;
-                return amount * +exchangeRate;
+                return 1;
         }
     };
 
-
     const init = () => {
+        const formElement = document.querySelector(".js-form")
+        const changeButton = document.querySelector(".js-changeButton");
+
         changeButton.addEventListener("click", changeCurrency);
         formElement.addEventListener("submit", onFormSubmit);
     };
 
-init();
+    init();
 }
