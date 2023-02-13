@@ -4,7 +4,7 @@
 * [Link to App](#link)
 
 ## General Info
-My second task-project from YouCode - Currency Calculator
+My second task-project from YouCode - Currency Converter
 
 
 ## Technologies
