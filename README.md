@@ -1,7 +1,7 @@
 # Content of Project
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [Link to App](#link)
+* [DEMO](#DEMO)
 
 ## General Info
 My second task-project from YouCode - Currency Converter
@@ -21,5 +21,4 @@ My second task-project from YouCode - Currency Converter
 ## DEMO
 ![demo](https://bartekkamela.github.io/currency-converter/images/demo.gif)
 
-## Link to App
-https://bartekkamela.github.io/currency-converter
+You can visit this website here: [Currency Converter](https://bartekkamela.github.io/currency-converter)
