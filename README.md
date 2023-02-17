@@ -19,7 +19,7 @@ My second task-project from YouCode - Currency Converter
 </ul>
 
 ## DEMO
-![demo] (https://bartekkamela.github.io/currency-converter/images/demo.gif)
+![demo](https://bartekkamela.github.io/currency-converter/images/demo.gif)
 
 ## Link to App
 https://bartekkamela.github.io/currency-converter
