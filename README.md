@@ -18,5 +18,8 @@ My second task-project from YouCode - Currency Converter
 <li>BEM naming convention</li>
 </ul>
 
+## DEMO
+![demo] (https://bartekkamela.github.io/currency-converter/images/demo.gif)
+
 ## Link to App
 https://bartekkamela.github.io/currency-converter
