@@ -19,56 +19,60 @@
 </head>
 
 <body>
-    <main>
-        <form class="form js-form">
-            <fieldset class="form__fieldset">
-                <legend class="form__legend">KALKULATOR WALUT</legend>
-                <p class="form__amount">
-                    <label>
-                        Podaj kwotę*: &nbsp; <input class="form__amountInput js-amount" name=”amount” type="number" min="0"
-                            step="0.01" placeholder="Wpisz kwotę" required>
-                    </label>
-                </p>
-                <fieldset class="from__options js-options">
-                    <legend class="form__optionsLegend">Wybierz waluty</legend>
-                    <p>
-                        <label class="form__currencyA">
-                            Mam:
-                            <select class="form__currencyIN js-currencyIN" name="fromCurrency">
-                                <option value="PLN">PLN</option>
-                                <option value="EUR">EUR</option>
-                                <option value="USD">USD</option>
-                                <option value="GBP">GBP</option>
-                                <option value="CHF">CHF</option>
-                            </select>
-                        </label>
-                        <button type="button" class="form__button js-changeButton"><=></button>
-                        <label class="form__currencyB">
-                            Chcę:
-                            <select class="form__currencyOUT js-currencyOUT" name="forCurrency">
-                                <option value="PLN">PLN</option>
-                                <option value="EUR" selected>EUR</option>
-                                <option value="USD">USD</option>
-                                <option value="GBP">GBP</option>
-                                <option value="CHF">CHF</option>
-                                
-                            </select>
+    <div>
+        <main>
+            <form class="form js-form">
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">KALKULATOR WALUT</legend>
+                    <p class="form__amount">
+                        <label>
+                            Podaj kwotę*: &nbsp; <input class="form__amountInput js-amount" name=”amount” type="number"
+                                min="0" step="0.01" placeholder="Wpisz kwotę" required>
                         </label>
                     </p>
+                    <fieldset class="from__options js-options">
+                        <legend class="form__optionsLegend">Wybierz waluty</legend>
+                        <p>
+                            <label class="form__currencyA">
+                                Mam:
+                                <select class="form__currencyIN js-currencyIN" name="fromCurrency">
+                                    <option value="PLN">PLN</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="USD">USD</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="CHF">CHF</option>
+                                </select>
+                            </label>
+                            <button type="button" class="form__button js-changeButton">
+                                <=>
+                            </button>
+                            <label class="form__currencyB">
+                                Chcę:
+                                <select class="form__currencyOUT js-currencyOUT" name="forCurrency">
+                                    <option value="PLN">PLN</option>
+                                    <option value="EUR" selected>EUR</option>
+                                    <option value="USD">USD</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="CHF">CHF</option>
+
+                                </select>
+                            </label>
+                        </p>
+                    </fieldset>
+                    <p class="form__buttonParagraph">
+                        <button class="form__button form__button--count js-submit">Przelicz</button>
+                    </p>
+                    <p class="form__result js-result">Kwota po przeliczeniu:<br> &nbsp;</p>
+                    <p class="form__exchangeCourse">
+                        Kurs walut z dnia 23.01.2023 r. według średniego kursu walut NBP.
+                    </p>
                 </fieldset>
-                <p class="form__buttonParagraph">
-                    <button class="form__button form__button--count js-submit">Przelicz</button>
-                </p>
-                <p class="form__result js-result">Kwota po przeliczeniu:<br> &nbsp;</p>
-                <p class="form__exchangeCourse">
-                    Kurs walut z dnia 23.01.2023 r. według średniego kursu walut NBP.
-                </p>
-            </fieldset>
-        </form>
-    </main>
-    <footer class="footer">
-        Copyright © Bartłomiej Kamela
-    </footer>
+            </form>
+        </main>
+        <footer class="footer">
+            Copyright © Bartłomiej Kamela
+        </footer>
+    </div>
 </body>
 
 </html>
